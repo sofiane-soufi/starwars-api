@@ -24,7 +24,7 @@ class App extends Component {
 
         this.setState({loading: true, currentPage: page});
 
-        fetch('http://localhost:8888/'+page+'?'+args)
+        fetch('http://34.220.231.208/'+page+'?'+args)
             .then(results => {
                 return results.json();
             }).then(results => {
