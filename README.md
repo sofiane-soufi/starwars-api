@@ -1,6 +1,6 @@
 <h2>Star Wars API</h1>
 <h3>How to setup the back-end</h3>
-- Upload your the file main.php and .htaccess to any directory on a web server that supports PHP.<br /><br />
+- Upload the files /api/main.php and /api/.htaccess to any directory on a web server that supports PHP.<br /><br />
 
 <h3>How to run the UI</h3>
 - Install the dependencies needed by executing the command  
