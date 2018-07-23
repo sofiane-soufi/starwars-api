@@ -24,6 +24,7 @@ class App extends Component {
 
         this.setState({loading: true, currentPage: page});
 
+        console.log(args);
         fetch('http://34.220.231.208/'+page+'?'+args)
             .then(results => {
                 return results.json();
