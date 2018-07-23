@@ -41,11 +41,11 @@ class Router extends API {
 
     public function __construct(){
 
-        $function = strtolower($_SERVER['REQUEST_METHOD']."_".substr($_SERVER['REDIRECT_URL'], 1));
+        $function = strtolower($_SERVER['REQUEST_METHOD']."_".substr(@$_SERVER['REDIRECT_URL'], 1));
 
         if(method_exists($this, $function) && is_callable(array($this, $function))){
 
-            foreach(explode('&', $_SERVER['REDIRECT_QUERY_STRING']) as $param){
+            foreach(explode('&', @$_SERVER['REDIRECT_QUERY_STRING']) as $param){
                 $arg = explode('=', $param);
 
                 if(!empty($arg[0])){
